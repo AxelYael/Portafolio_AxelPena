@@ -9,7 +9,7 @@ Este es mi portafolio personal creado con HTML y CSS, donde comparto informació
 ## 🚀 Cómo visualizar el sitio
 
 1. Puedes acceder directamente desde el navegador usando este link: 
-   👉 [https://axelyael.github.io/Potafolio_AxelPena/Portafolio](https://axelyael.github.io/Potafolio_AxelPena/Portafolio)
+   👉 [https://axelyael.github.io/Portafolio_AxelPena/Portafolio](https://axelyael.github.io/Portafolio_AxelPena/Portafolio)
 
 
 2. O, si prefieres clonarlo y abrirlo localmente:

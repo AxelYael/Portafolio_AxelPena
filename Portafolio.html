@@ -1,143 +1,282 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Axel Yael Peña Nuñez | Ciencia e Ingeniería de Datos</title>
-  <meta name="description" content="Portafolio de Axel Yael Peña Nuñez, licenciado en Ciencias de la Computación (UNAM). Python, SQL, Machine Learning e ingeniería de datos en AWS y GCP.">
-  <meta name="author" content="Axel Yael Peña Nuñez">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Axel Yael Peña Nuñez | Ciencia e Ingeniería de Datos">
-  <meta property="og:description" content="Python, SQL, Machine Learning e ingeniería de datos en la nube.">
-  <meta property="og:image" content="axel.jpeg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
-  <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Axel Yael Peña Nuñez","jobTitle":"Ingeniero de Datos","alumniOf":"Universidad Nacional Autónoma de México","sameAs":["https://github.com/AxelYael","https://www.linkedin.com/in/axel-yael-pe%C3%B1a-nu%C3%B1ez-69a1362a5/"]}
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Axel Peña Núñez · Ingeniero de datos</title>
+<meta name="description" content="Ingeniero de datos en BBVA (Minsait). Pipelines, modelos de ML en producción sobre AWS, Spark y SQL.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+<script>
+/* Aplica el tema guardado antes de pintar para evitar parpadeo */
+try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}
+</script>
+<style>
+:root{
+  --paper:#F3F5F4; --ink:#16211F; --muted:#506060; --rule:#CBD3D1; --accent:#2438D6; --accent-ink:#fff; --soft:#E6EAE9;
+  --serif:Charter,"Bitstream Charter","Iowan Old Style","Sitka Text",Cambria,Georgia,serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--paper:#0F1419;--ink:#E4EAE8;--muted:#9AA8A8;--rule:#27323A;--accent:#9DB0FF;--accent-ink:#0F1419;--soft:#18202A;color-scheme:dark}
+}
+:root[data-theme="dark"]{--paper:#0F1419;--ink:#E4EAE8;--muted:#9AA8A8;--rule:#27323A;--accent:#9DB0FF;--accent-ink:#0F1419;--soft:#18202A;color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--serif);text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration-color:var(--accent);text-decoration-thickness:.1em;text-underline-offset:.2em}
+a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:1rem;top:-4rem;background:var(--accent);color:var(--accent-ink);padding:.5rem 1rem;z-index:10}
+.skip:focus{top:1rem}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+
+/* Cabecera */
+header.site{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;font:.875rem var(--mono)}
+header.site nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+header.site a{text-decoration:none;color:var(--muted)}
+header.site a:hover{color:var(--accent)}
+.theme{font:inherit;background:none;color:var(--muted);border:1px solid var(--rule);border-radius:.4rem;padding:.3rem .6rem;cursor:pointer}
+.theme:hover{color:var(--accent);border-color:var(--accent)}
+
+/* Hero */
+.hero{padding:clamp(3rem,10vw,7rem) 0 clamp(2.5rem,6vw,4rem)}
+.hero h1{font:700 clamp(2.2rem,6.2vw,4.4rem)/1.08 var(--serif);letter-spacing:-.02em;margin:0 0 1.5rem;max-width:20ch;text-wrap:balance}
+.hero p.lead{max-width:38rem;font-size:1.2rem;color:var(--muted);margin:0 0 2rem}
+.hero p.lead strong{color:var(--ink);font-weight:600}
+.cta{display:flex;gap:.75rem;flex-wrap:wrap;font:.9375rem var(--sans)}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:.4rem;text-decoration:none;border:1px solid var(--ink);transition:background .2s,color .2s,border-color .2s}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* Pipeline: elemento memorable del hero */
+.pipe{list-style:none;margin:3.5rem 0 0;padding:1.4rem 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;position:relative;border-top:1px solid var(--rule);font:.8125rem/1.4 var(--mono)}
+.pipe li{color:var(--muted)}
+.pipe b{display:block;color:var(--ink);font-weight:600;margin-bottom:.15rem}
+.pipe::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--accent);animation:flow 3.2s cubic-bezier(.65,0,.35,1) .4s 1 both}
+@keyframes flow{to{left:calc(100% - 9px)}}
+@media (max-width:40rem){.pipe{grid-template-columns:repeat(2,1fr)}.pipe::before{display:none}}
+
+/* Secciones: columna lateral = título, columna principal = contenido */
+section{padding:clamp(2.5rem,6vw,4rem) 0;border-top:1px solid var(--rule)}
+.grid{display:grid;grid-template-columns:11rem 1fr;gap:1.5rem 3rem}
+@media (max-width:48rem){.grid{grid-template-columns:1fr}}
+h2{font:600 .9375rem var(--mono);margin:0;color:var(--muted);position:sticky;top:1rem;align-self:start}
+h3{font:600 1.3rem/1.3 var(--serif);margin:0 0 .25rem}
+.meta{font:.8125rem var(--mono);color:var(--muted);margin:0 0 .75rem}
+.stack{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:1rem 0 0}
+.stack li{font:.75rem var(--mono);padding:.15rem .55rem;border:1px solid var(--rule);border-radius:.3rem;color:var(--muted)}
+
+/* Experiencia (secuencia real: línea de tiempo) */
+.job{position:relative;padding:0 0 2.5rem 1.5rem;border-left:1px solid var(--rule)}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-5px;top:.55rem;width:9px;height:9px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.job p{margin:.5rem 0}
+.job .num{font:600 .95em var(--mono);color:var(--accent)}
+
+/* Casos */
+.case{padding:0 0 2.75rem}
+.case:last-child{padding-bottom:0}
+.case dl{display:grid;grid-template-columns:7.5rem 1fr;gap:.6rem 1.25rem;margin:1rem 0 0}
+.case dt{font:.8125rem var(--mono);color:var(--muted);padding-top:.25rem}
+.case dd{margin:0}
+@media (max-width:36rem){.case dl{grid-template-columns:1fr;gap:.1rem}.case dd{margin-bottom:.7rem}}
+
+/* Stack */
+.tech{display:grid;gap:1.5rem 2rem;grid-template-columns:repeat(2,1fr);margin:0}
+@media (max-width:36rem){.tech{grid-template-columns:1fr}}
+.tech dt{font:600 .9375rem var(--mono);margin-bottom:.2rem;color:var(--accent)}
+.tech dd{margin:0;color:var(--muted);font-size:.975rem}
+.tech dd b{color:var(--ink);font-weight:600}
+
+/* Notas */
+.notes{list-style:none;padding:0;margin:0}
+.notes li{padding:.9rem 0;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:1rem}
+.notes li:first-child{padding-top:0}
+.notes span{font:.8125rem var(--mono);color:var(--muted);white-space:nowrap}
+
+/* Contacto */
+.status{display:inline-flex;align-items:center;gap:.5rem;font:.875rem var(--mono);color:var(--muted)}
+.status i{width:.55rem;height:.55rem;border-radius:50%;background:#2E9E6B}
+.links{list-style:none;padding:0;margin:1.5rem 0 0;display:flex;gap:1.5rem;flex-wrap:wrap;font:1rem var(--sans)}
+footer{padding:2rem 0 3rem;font:.8125rem var(--mono);color:var(--muted);border-top:1px solid var(--rule)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+  .pipe::before{left:calc(100% - 9px)}
+}
+</style>
 </head>
 <body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="wrap">
+  <header class="site">
+    <a href="#top" style="color:var(--ink);text-decoration:none;font-weight:600">axel.peña</a>
+    <nav aria-label="Principal">
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#stack">Stack</a>
+      <a href="#notas">Notas</a>
+      <a href="#contacto">Contacto</a>
+      <button class="theme" id="theme" type="button" aria-label="Cambiar tema claro u oscuro">tema</button>
+    </nav>
+  </header>
 
-  <div class="layout">
-    <aside class="rail">
-      <div class="rail-inner">
-        <img class="portrait" src="axel.jpeg" alt="Retrato de Axel Yael Peña Nuñez" width="120" height="120" decoding="async">
-        <h1>Axel Yael<br>Peña Nuñez</h1>
-        <p class="role">Ingeniero de Datos con enfoque en Ciencia de Datos</p>
-        <nav aria-label="Principal">
-          <ul>
-            <li><a href="#perfil">Perfil</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-        <ul class="links">
-          <li><a href="mailto:yael.pena.nunez@gmail.com">Correo</a></li>
-          <li><a href="https://www.linkedin.com/in/axel-yael-pe%C3%B1a-nu%C3%B1ez-69a1362a5/" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/AxelYael" rel="noopener">GitHub</a></li>
-        </ul>
+  <main id="main">
+    <div class="hero" id="top">
+      <h1>IngenieroDatos/DataScience.</h1>
+      <p class="lead">Soy <strong>Axel Peña</strong>, ingeniero de datos en BBVA (vía Minsait). Construyo pipelines en Python, PySpark y SQL, y llevo modelos de Machine Learning a producción sobre AWS. Licenciado en Ciencias de la Computación por la UNAM.</p>
+      <div class="cta">
+        <a class="btn primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn ghost" href="mailto:yael.pena.nunez@gmail.com">Escríbeme</a>
+        <a class="btn ghost" href="/CV_2026_AXELPENA_DC.pdf" download>Descargar CV</a>
       </div>
-    </aside>
+      <ol class="pipe" aria-label="Cómo trabajo: de los datos crudos a producción">
+        <li><b>Ingesta</b>SQL, scraping, ETL</li>
+        <li><b>Limpieza</b>PySpark, calidad de datos</li>
+        <li><b>Modelo</b>scikit-learn, validación</li>
+        <li><b>Producción</b>AWS, monitoreo</li>
+      </ol>
+    </div>
 
-    <main id="contenido">
-      <section id="perfil" aria-labelledby="h-perfil">
-        <h2 id="h-perfil" class="sr-only">Perfil</h2>
-        <p class="statement">Preparo datos, entreno y valido modelos de Machine Learning y los llevo a producción en la nube.</p>
-        <p>Licenciado en Ciencias de la Computación por la UNAM, con experiencia en bancos y concesiones de infraestructura. Trabajo con Python, SQL y Spark, y me apoyo en bases sólidas de matemáticas, probabilidad y estadística para generar valor a partir de los datos.</p>
-        <dl class="facts">
-          <div><dt>Actualmente</dt><dd>Minsait, proyecto BBVA</dd></div>
-          <div><dt>Formación</dt><dd>UNAM, promedio 9.0</dd></div>
-          <div><dt>En curso</dt><dd>Diplomado en IA, ML y Deep Learning</dd></div>
-          <div><dt>Certificado</dt><dd>AWS Cloud Practitioner, Scrum Developer</dd></div>
-        </dl>
-      </section>
-
-      <section id="experiencia" aria-labelledby="h-exp">
+    <section id="experiencia" aria-labelledby="h-exp">
+      <div class="grid">
         <h2 id="h-exp">Experiencia</h2>
-        <ol class="timeline">
-          <li>
-            <p class="when">Mar 2026 a la fecha</p>
-            <h3>Ingeniero de Datos Consultant</h3>
-            <p class="org">Minsait, proyecto BBVA</p>
-            <ul>
-              <li>Participé en el desarrollo de un engine de Machine Learning que predice los mejores horarios y canales de contacto (llamada, correo, SMS) para cada cliente, con el fin de aumentar la tasa de contacto efectivo.</li>
-              <li>Colaboré en un modelo de clasificación para estimar la propensión de otorgamiento de crédito y apoyar decisiones de negocio.</li>
-              <li>Realicé análisis exploratorio, limpieza, ingeniería de variables y validación de datos con Python, PySpark y SQL avanzado.</li>
-              <li>Apoyé la productivización y el monitoreo de modelos y casos de uso en AWS (S3, Athena, CloudWatch, SageMaker).</li>
-              <li>Desarrollé casos de uso en Scala y PySpark, orquesté procesos en Control-M e integré componentes de calidad de datos (Hammurabi, Smart Cleaner).</li>
-              <li>Trabajé con Scrum y Jira, y creé una página interna para el registro de CRQs del equipo Transactional S&amp;C.</li>
-            </ul>
-          </li>
-          <li>
-            <p class="when">Jul 2025 a feb 2026</p>
-            <h3>Ingeniero de Datos Jr</h3>
-            <p class="org">EasytripMX (ICA &amp; Egis)</p>
-            <ul>
-              <li>Desarrollé procesos ETL con SSIS, Airflow y SQL Server Agent desde SQL Server, Oracle y fuentes externas, y construí una base analítica que redujo millones de registros a miles para consumo en Power BI.</li>
-              <li>Implementé web scraping para ingestar datos de un sistema con acceso restringido, bajando la captura de varias horas a pocos minutos y eliminando la carga manual.</li>
-              <li>Usé PySpark para validaciones y conciliaciones masivas de datos.</li>
-            </ul>
-          </li>
-          <li>
-            <p class="when">Feb a jul 2025</p>
-            <h3>Analista de Datos (Training)</h3>
-            <p class="org">CONSAR</p>
-            <ul>
-              <li>Desarrollé dashboards en Looker para difundir información pública sobre las AFORES.</li>
-              <li>Mejoré la calidad de datos de áreas Operativa, Financiera y Contable: limpieza, estandarización, valores faltantes y detección de atípicos.</li>
-              <li>Escribí consultas SQL optimizadas y vistas, y particioné tablas en BigQuery dentro de flujos en Google Cloud Platform.</li>
-            </ul>
-          </li>
-        </ol>
-      </section>
-
-      <section id="proyectos" aria-labelledby="h-proy">
-        <h2 id="h-proy">Proyectos y formación</h2>
-        <div class="projects">
-          <article>
-            <h3>Diplomado en IA, Machine Learning y Deep Learning</h3>
-            <p>UNAM, en curso. Modelos supervisados y no supervisados en Python, validación cruzada, ajuste de hiperparámetros y redes neuronales evaluadas con precision, recall, F1 y AUC-ROC.</p>
+        <div>
+          <article class="job">
+            <h3>Ingeniero de Datos · Minsait para BBVA</h3>
+            <p class="meta">Marzo 2026 – actualidad</p>
+            <p>Formo parte del equipo que desarrolla un <em>engine</em> de ML que predice el mejor horario y canal de contacto (llamada, SMS, correo) por cliente, para elevar el contacto efectivo en campañas de cobranza y venta.</p>
+            <p>Colaboro en un modelo de clasificación de propensión de crédito y en su ciclo completo: EDA, ingeniería de variables, validación y puesta en producción y monitoreo en AWS (S3, Athena, CloudWatch, SageMaker). Orquesto en Control-M y construyo componentes de calidad de datos (Hammurabi, Smart Cleaner).</p>
+            <ul class="stack"><li>Python</li><li>PySpark</li><li>Scala</li><li>SQL</li><li>AWS</li><li>Control-M</li></ul>
           </article>
-          <article>
-            <h3>Minería de datos con la Global Terrorism Database</h3>
-            <p>Metodología CRISP-DM: análisis exploratorio, limpieza, reglas de asociación (Apriori), árboles CART y redes neuronales, con evaluación de desempeño.</p>
+          <article class="job">
+            <h3>Ingeniero de Datos Jr · EasytripMX (ICA &amp; Egis)</h3>
+            <p class="meta">Julio 2025 – Febrero 2026</p>
+            <p>Diseñé ETL con SSIS, Airflow y SQL Server Agent sobre SQL Server, Oracle y fuentes externas. La base analítica resultante redujo <span class="num">millones de registros a miles</span> y aligeró el consumo en Power BI.</p>
+            <p>Reemplacé una captura manual con web scraping: de horas a minutos, con <span class="num">100 %</span> de la carga manual eliminada. Optimicé validaciones y conciliaciones masivas con PySpark.</p>
+            <ul class="stack"><li>SSIS</li><li>Airflow</li><li>SQL Server</li><li>Oracle</li><li>Power BI</li><li>PySpark</li></ul>
           </article>
-          <article>
-            <h3>Base de datos de un zoológico</h3>
-            <p>Modelo entidad-relación y relacional, DDL, DML, consultas y procedimientos almacenados.</p>
-          </article>
-          <article>
-            <h3>Ecommerce</h3>
-            <p>Aplicación con front-end y back-end para gestionar clientes y productos y generar facturas.</p>
+          <article class="job">
+            <h3>Training Analista de Datos · CONSAR</h3>
+            <p class="meta">Febrero 2025 – Julio 2025</p>
+            <p>Publiqué dashboards en Looker con información pública sobre las AFORES y unifiqué datos de las áreas Operativa, Financiera y Contable (limpieza, estandarización, atípicos). Optimicé consultas SQL y particioné tablas en BigQuery.</p>
+            <ul class="stack"><li>Looker</li><li>BigQuery</li><li>GCP</li><li>SQL</li></ul>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="habilidades" aria-labelledby="h-hab">
-        <h2 id="h-hab">Habilidades</h2>
-        <dl class="skills">
-          <div><dt>Lenguajes</dt><dd><span>Python</span><span>SQL</span><span>Java</span><span>Scala</span><span>R</span></dd></div>
-          <div><dt>Ciencia de datos</dt><dd><span>Estadística</span><span>Análisis exploratorio</span><span>scikit-learn</span><span>Redes neuronales</span><span>Validación de modelos</span></dd></div>
-          <div><dt>Datos y nube</dt><dd><span>Apache Spark</span><span>Airflow</span><span>AWS</span><span>GCP y BigQuery</span><span>Control-M</span></dd></div>
-          <div><dt>Visualización</dt><dd><span>Power BI</span><span>Looker</span><span>Excel</span></dd></div>
-          <div><dt>Herramientas</dt><dd><span>Git y GitHub</span><span>Linux</span><span>Scrum</span><span>Jira</span></dd></div>
-          <div><dt>Idiomas</dt><dd><span>Español nativo</span><span>Inglés B2</span></dd></div>
+    <section id="proyectos" aria-labelledby="h-pro">
+      <div class="grid">
+        <h2 id="h-pro">Proyectos</h2>
+        <div>
+          <article class="case">
+            <h3>Canal y horario óptimo de contacto</h3>
+            <p class="meta">BBVA · 2026</p>
+            <dl>
+              <dt>Problema</dt><dd>Las campañas de cobranza y venta contactaban a todos igual, sin considerar cuándo ni por qué canal responde cada cliente.</dd>
+              <dt>Solución</dt><dd>Un engine de ML que recomienda canal y horario por cliente, con datos preparados en PySpark y SQL, validación con métricas de desempeño y revisión de calidad de datos. Se despliega y monitorea en AWS.</dd>
+              <dt>Impacto</dt><dd>Objetivo: maximizar la tasa de contacto efectivo. <!-- TODO: agrega la métrica real si puedes compartirla --></dd>
+            </dl>
+            <ul class="stack"><li>PySpark</li><li>SageMaker</li><li>Athena</li><li>CloudWatch</li></ul>
+          </article>
+          <article class="case">
+            <h3>Base analítica para Power BI</h3>
+            <p class="meta">EasytripMX · 2025</p>
+            <dl>
+              <dt>Problema</dt><dd>Los reportes consumían millones de registros de fuentes heterogéneas, con lentitud y conciliaciones manuales.</dd>
+              <dt>Solución</dt><dd>ETL orquestado con Airflow y SSIS que integra SQL Server, Oracle y fuentes externas en una base analítica agregada.</dd>
+              <dt>Impacto</dt><dd>Millones de registros reducidos a miles; consumo en Power BI optimizado.</dd>
+            </dl>
+            <ul class="stack"><li>Airflow</li><li>SSIS</li><li>SQL Server</li><li>Oracle</li></ul>
+          </article>
+          <article class="case">
+            <h3>Ingesta automatizada con web scraping</h3>
+            <p class="meta">EasytripMX · 2025</p>
+            <dl>
+              <dt>Problema</dt><dd>Datos en sistemas con acceso restringido que se capturaban a mano durante horas.</dd>
+              <dt>Solución</dt><dd>Un proceso de scraping integrado al pipeline de ingesta.</dd>
+              <dt>Impacto</dt><dd>De varias horas a pocos minutos, y 100 % de carga manual eliminada.</dd>
+            </dl>
+            <ul class="stack"><li>Python</li><li>Scraping</li><li>SQL Server</li></ul>
+          </article>
+          <article class="case">
+            <h3>Patrones en la Global Terrorism Database</h3>
+            <p class="meta">Seminario en Ciencia de Datos · UNAM · 2025</p>
+            <dl>
+              <dt>Problema</dt><dd>Identificar patrones en ataques a nivel mundial dentro de un conjunto de datos grande y ruidoso.</dd>
+              <dt>Solución</dt><dd>EDA, limpieza y minería de datos con Apriori, árboles de decisión CART y redes neuronales, comparando su desempeño.</dd>
+              <dt>Stack</dt><dd>Python, scikit-learn.</dd>
+            </dl>
+            <!-- TODO: enlaza el repositorio: <a href="https://github.com/TU_USUARIO/gtd">Ver código</a> -->
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" aria-labelledby="h-stk">
+      <div class="grid">
+        <h2 id="h-stk">Stack</h2>
+        <dl class="tech">
+          <div><dt>Lenguajes</dt><dd><b>Python, Java, SQL</b> a nivel avanzado. Scala para casos de uso en Spark.</dd></div>
+          <div><dt>Datos y procesamiento</dt><dd><b>PySpark</b> para volumen, <b>Airflow</b> y <b>SSIS</b> para ETL, <b>Control-M</b> para orquestar.</dd></div>
+          <div><dt>Cloud</dt><dd><b>AWS</b> (S3, Athena, CloudWatch, SageMaker) en producción; <b>GCP</b> (BigQuery) en analítica.</dd></div>
+          <div><dt>ML y analítica</dt><dd><b>scikit-learn</b> y redes neuronales; dashboards en <b>Looker</b> y <b>Power BI</b>.</dd></div>
+          <div><dt>Herramientas</dt><dd>Git, GitHub, Linux, Postman, Spring Boot, Scrum con Jira y Miro.</dd></div>
+          <div><dt>Certificaciones</dt><dd>AWS Cloud Practitioner y Scrum Developer (2026). Diplomado en IA, ML y Deep Learning (UNAM, en curso).</dd></div>
         </dl>
-      </section>
+      </div>
+    </section>
 
-      <section id="contacto" aria-labelledby="h-con">
+    <section id="notas" aria-labelledby="h-not">
+      <div class="grid">
+        <h2 id="h-not">Notas</h2>
+        <div>
+          <p style="margin-top:0;color:var(--muted)">Una bitácora de lo que aprendo construyendo. Próximas entradas:</p>
+          <ul class="notes">
+            <li>Calidad de datos en pipelines de PySpark <span>borrador</span></li>
+            <li>Del notebook a SageMaker: lo que cambia al productivizar <span>borrador</span></li>
+            <li>Scraping como ingesta: cuándo sí y cuándo no <span>borrador</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="h-con">
+      <div class="grid">
         <h2 id="h-con">Contacto</h2>
-        <p>Escríbeme si quieres hablar de una vacante o colaborar en un proyecto de datos.</p>
-        <p><a class="btn" href="mailto:yael.pena.nunez@gmail.com">yael.pena.nunez@gmail.com</a></p>
-      </section>
+        <div>
+          <p style="margin-top:0;font-size:1.3rem;max-width:30rem">Si tienes datos que mover, limpiar o convertir en un modelo, platiquemos.</p>
+          <p class="status"><i aria-hidden="true"></i> Abierto a conversar sobre ingeniería de datos y ML</p>
+          <ul class="links">
+            <li><a href="mailto:yael.pena.nunez@gmail.com">yael.pena.nunez@gmail.com</a></li>
+            <li><a href="https://github.com/TU_USUARIO" rel="me noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/TU_USUARIO" rel="me noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      <footer><p>© 2026 Axel Yael Peña Nuñez</p></footer>
-    </main>
-  </div>
+  <footer>© <span id="y">2026</span> Axel Peña Núñez · Ciudad de México</footer>
+</div>
+
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('theme');
+  document.getElementById('y').textContent=new Date().getFullYear();
+  function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  b.addEventListener('click',function(){
+    var n=cur()==='dark'?'light':'dark';r.dataset.theme=n;
+    try{localStorage.setItem('theme',n)}catch(e){}
+  });
+})();
+</script>
 </body>
 </html>

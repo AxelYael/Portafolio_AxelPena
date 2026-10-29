@@ -2,263 +2,142 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio Axel Yael Pena Nunez</title>
-  
-  <!-- Hoja de estilos  -->
-  <link rel="stylesheet" href="Style.css">
-
-  <!-- Bootstrap 5 CSS  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Axel Yael Peña Nuñez | Ciencia e Ingeniería de Datos</title>
+  <meta name="description" content="Portafolio de Axel Yael Peña Nuñez, licenciado en Ciencias de la Computación (UNAM). Python, SQL, Machine Learning e ingeniería de datos en AWS y GCP.">
+  <meta name="author" content="Axel Yael Peña Nuñez">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Axel Yael Peña Nuñez | Ciencia e Ingeniería de Datos">
+  <meta property="og:description" content="Python, SQL, Machine Learning e ingeniería de datos en la nube.">
+  <meta property="og:image" content="axel.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Axel Yael Peña Nuñez","jobTitle":"Ingeniero de Datos","alumniOf":"Universidad Nacional Autónoma de México","sameAs":["https://github.com/AxelYael","https://www.linkedin.com/in/axel-yael-pe%C3%B1a-nu%C3%B1ez-69a1362a5/"]}
+  </script>
 </head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
 
-</body>
-
-<!--  <body class="bg-light">  (ME ESTABA DANDO PROBLEMAS ENTONCES MEJOR LO QUITE YA QUE NO SOBRESCRIBIA EL DISNEO QUE DI EN CSS xD-->
-
-  <!-- HEADER / NAVBAR -->
-  <header id="banner" role="banner" class="mb-3">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#banner">Portafolio de Axel</a>
-        <button 
-          class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarContent" 
-          aria-controls="navbarContent" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#acerca-de-mi">Acerca de mí</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#habilidades">Habilidades</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="#experiencia">Experiencia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#proyectos">Proyectos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacto">Contacto</a>
-            </li>
+  <div class="layout">
+    <aside class="rail">
+      <div class="rail-inner">
+        <img class="portrait" src="axel.jpeg" alt="Retrato de Axel Yael Peña Nuñez" width="120" height="120" decoding="async">
+        <h1>Axel Yael<br>Peña Nuñez</h1>
+        <p class="role">Ingeniero de Datos con enfoque en Ciencia de Datos</p>
+        <nav aria-label="Principal">
+          <ul>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
           </ul>
-        </div>
+        </nav>
+        <ul class="links">
+          <li><a href="mailto:yael.pena.nunez@gmail.com">Correo</a></li>
+          <li><a href="https://www.linkedin.com/in/axel-yael-pe%C3%B1a-nu%C3%B1ez-69a1362a5/" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/AxelYael" rel="noopener">GitHub</a></li>
+        </ul>
       </div>
-    </nav>
-  </header>
+    </aside>
 
-  <!-- CONTENEDOR PRINCIPAL -->
-  <main role="main" class="container my-4">
+    <main id="contenido">
+      <section id="perfil" aria-labelledby="h-perfil">
+        <h2 id="h-perfil" class="sr-only">Perfil</h2>
+        <p class="statement">Preparo datos, entreno y valido modelos de Machine Learning y los llevo a producción en la nube.</p>
+        <p>Licenciado en Ciencias de la Computación por la UNAM, con experiencia en bancos y concesiones de infraestructura. Trabajo con Python, SQL y Spark, y me apoyo en bases sólidas de matemáticas, probabilidad y estadística para generar valor a partir de los datos.</p>
+        <dl class="facts">
+          <div><dt>Actualmente</dt><dd>Minsait, proyecto BBVA</dd></div>
+          <div><dt>Formación</dt><dd>UNAM, promedio 9.0</dd></div>
+          <div><dt>En curso</dt><dd>Diplomado en IA, ML y Deep Learning</dd></div>
+          <div><dt>Certificado</dt><dd>AWS Cloud Practitioner, Scrum Developer</dd></div>
+        </dl>
+      </section>
 
-    <!-- SECCIÓN: ACERCA DE MÍ -->
-    <section id="acerca-de-mi" class="mb-5">
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="mb-3">Acerca de mí</h2>
-          <p>
-           ¡Hola! Soy Axel Yael, científico de la computación. Me apasionan el aprendizaje continuo y el desarrollo profesional.
-           Busco oportunidades que me permitan aplicar mis conocimientos en programación, colaborando en proyectos innovadores. 
-           Tengo un especial interés en la ciberseguridad, el análisis e ingeniería de datos y el desarrollo de software. n.n
-          </p>
+      <section id="experiencia" aria-labelledby="h-exp">
+        <h2 id="h-exp">Experiencia</h2>
+        <ol class="timeline">
+          <li>
+            <p class="when">Mar 2026 a la fecha</p>
+            <h3>Ingeniero de Datos Consultant</h3>
+            <p class="org">Minsait, proyecto BBVA</p>
+            <ul>
+              <li>Participé en el desarrollo de un engine de Machine Learning que predice los mejores horarios y canales de contacto (llamada, correo, SMS) para cada cliente, con el fin de aumentar la tasa de contacto efectivo.</li>
+              <li>Colaboré en un modelo de clasificación para estimar la propensión de otorgamiento de crédito y apoyar decisiones de negocio.</li>
+              <li>Realicé análisis exploratorio, limpieza, ingeniería de variables y validación de datos con Python, PySpark y SQL avanzado.</li>
+              <li>Apoyé la productivización y el monitoreo de modelos y casos de uso en AWS (S3, Athena, CloudWatch, SageMaker).</li>
+              <li>Desarrollé casos de uso en Scala y PySpark, orquesté procesos en Control-M e integré componentes de calidad de datos (Hammurabi, Smart Cleaner).</li>
+              <li>Trabajé con Scrum y Jira, y creé una página interna para el registro de CRQs del equipo Transactional S&amp;C.</li>
+            </ul>
+          </li>
+          <li>
+            <p class="when">Jul 2025 a feb 2026</p>
+            <h3>Ingeniero de Datos Jr</h3>
+            <p class="org">EasytripMX (ICA &amp; Egis)</p>
+            <ul>
+              <li>Desarrollé procesos ETL con SSIS, Airflow y SQL Server Agent desde SQL Server, Oracle y fuentes externas, y construí una base analítica que redujo millones de registros a miles para consumo en Power BI.</li>
+              <li>Implementé web scraping para ingestar datos de un sistema con acceso restringido, bajando la captura de varias horas a pocos minutos y eliminando la carga manual.</li>
+              <li>Usé PySpark para validaciones y conciliaciones masivas de datos.</li>
+            </ul>
+          </li>
+          <li>
+            <p class="when">Feb a jul 2025</p>
+            <h3>Analista de Datos (Training)</h3>
+            <p class="org">CONSAR</p>
+            <ul>
+              <li>Desarrollé dashboards en Looker para difundir información pública sobre las AFORES.</li>
+              <li>Mejoré la calidad de datos de áreas Operativa, Financiera y Contable: limpieza, estandarización, valores faltantes y detección de atípicos.</li>
+              <li>Escribí consultas SQL optimizadas y vistas, y particioné tablas en BigQuery dentro de flujos en Google Cloud Platform.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section id="proyectos" aria-labelledby="h-proy">
+        <h2 id="h-proy">Proyectos y formación</h2>
+        <div class="projects">
+          <article>
+            <h3>Diplomado en IA, Machine Learning y Deep Learning</h3>
+            <p>UNAM, en curso. Modelos supervisados y no supervisados en Python, validación cruzada, ajuste de hiperparámetros y redes neuronales evaluadas con precision, recall, F1 y AUC-ROC.</p>
+          </article>
+          <article>
+            <h3>Minería de datos con la Global Terrorism Database</h3>
+            <p>Metodología CRISP-DM: análisis exploratorio, limpieza, reglas de asociación (Apriori), árboles CART y redes neuronales, con evaluación de desempeño.</p>
+          </article>
+          <article>
+            <h3>Base de datos de un zoológico</h3>
+            <p>Modelo entidad-relación y relacional, DDL, DML, consultas y procedimientos almacenados.</p>
+          </article>
+          <article>
+            <h3>Ecommerce</h3>
+            <p>Aplicación con front-end y back-end para gestionar clientes y productos y generar facturas.</p>
+          </article>
         </div>
-        <div class="col-md-6 text-center">
-          <img 
-            src="axel.jpeg" 
-            class="img-fluid rounded shadow hover-scale" 
-            style="max-height: 300px; object-fit: cover;"
-          >
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SECCIÓN: HABILIDADES (Tabla) -->
-    <section id="habilidades" class="mb-5">
-      <h2 class="mb-3">Habilidades principales</h2>
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover align-middle">
-          <thead class="table-dark">
-            <tr>
-              <th scope="col">Herramientas</th>
-              <th scope="col">Nivel de dominio</th>
-            </tr>
-          </thead>
-          <tbody>
-             <tr>
-              <td>Paqueteria Microsoft</td>
-              <td>Intermedio</td>
-            </tr>
-              <tr>
-              <td>Java & SQL</td>
-              <td>Avanzado</td>
-            </tr>
-            <tr>
-              <td>Conocimientos de Programación Orientada a Objetos y estructuras de datos </td>
-              <td>Avanzado</td>
-            </tr>
-              <tr>
-              <td>Spring Boot & Postman</td>
-              <td>Basico</td>
-            </tr>
-              <tr>
-              <td>Html & CSS</td>
-              <td>Intermedio</td>
-            <tr>
-              <td>Python & R</td>
-              <td>Intermedio</td>
-            </tr>
-              <tr>
-              <td>Looker & Power BI</td>
-              <td>Intermedio</td>
-            </tr>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    
-    <!-- SECCIÓN: EXPERIENCIA -->
-<section id="experiencia" class="mb-5">
-  <h2 class="mb-4">Experiencia</h2>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">CONSAR (Pasantía) – Ingeniero de Datos y Automatización</h5>
-      <p class="card-text"><small class="text-muted">Noviembre 2024 - Mayo 2025</small></p>
-      <ul>
-        <li>Desarrollé dashboards interactivos en Looker para facilitar el análisis posterior de datos.</li>
-        <li>Diseñé y ejecuté procesos ETL para mejorar la calidad de datos a partir de múltiples archivos Excel de diferentes áreas de CONSAR.</li>
-        <li>Colaboré en la actualización de bases de datos y creación de consultas SQL para integrarlas en Looker.</li>
-        <li>Automatización de descargas de datos (web scraping) y generación de informes estadísticos usando Python, R y Excel.</li>
-      </ul>
-    </div>
+      <section id="habilidades" aria-labelledby="h-hab">
+        <h2 id="h-hab">Habilidades</h2>
+        <dl class="skills">
+          <div><dt>Lenguajes</dt><dd><span>Python</span><span>SQL</span><span>Java</span><span>Scala</span><span>R</span></dd></div>
+          <div><dt>Ciencia de datos</dt><dd><span>Estadística</span><span>Análisis exploratorio</span><span>scikit-learn</span><span>Redes neuronales</span><span>Validación de modelos</span></dd></div>
+          <div><dt>Datos y nube</dt><dd><span>Apache Spark</span><span>Airflow</span><span>AWS</span><span>GCP y BigQuery</span><span>Control-M</span></dd></div>
+          <div><dt>Visualización</dt><dd><span>Power BI</span><span>Looker</span><span>Excel</span></dd></div>
+          <div><dt>Herramientas</dt><dd><span>Git y GitHub</span><span>Linux</span><span>Scrum</span><span>Jira</span></dd></div>
+          <div><dt>Idiomas</dt><dd><span>Español nativo</span><span>Inglés B2</span></dd></div>
+        </dl>
+      </section>
+
+      <section id="contacto" aria-labelledby="h-con">
+        <h2 id="h-con">Contacto</h2>
+        <p>Escríbeme si quieres hablar de una vacante o colaborar en un proyecto de datos.</p>
+        <p><a class="btn" href="mailto:yael.pena.nunez@gmail.com">yael.pena.nunez@gmail.com</a></p>
+      </section>
+
+      <footer><p>© 2026 Axel Yael Peña Nuñez</p></footer>
+    </main>
   </div>
-</section>
-
-    
-    <!-- SECCIÓN: PROYECTOS -->
-    <section id="proyectos" class="mb-5">
-      <h2 class="mb-4">Proyectos Destacados</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Diseño de Bases de Datos Zoologico</h5>
-              <p class="card-text">Diseno e implementacion de una Base de Dato,inckuyendo el Modelo Entidad-Relacion, Modelo Relacional,
-              DML, DDL, y la implementacion de consultas, procedimientos para garantizar su funcionalidad.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Ecommerce</h5>
-              <p class="card-text">Diseño y desarrollo del front-end para mostrar información de clientes 
-              y productos. El sistema permite la gestión de productos, la incorporación de nuevos artículos y la generación de facturas. 
-              También se incluyó desarrollo back-end.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Proyecto de Ciencia de Datos</h5>
-              <p class="card-text">  Aplicación de la metodología CRISP-DM utilizando el conjunto de datos GTD: Realicé análisis exploratorio, 
-               limpieza/ preprocesamiento de datos (valores faltantes, inconsistencias, reducción de ruido). Posteriormente, se aplicaron reglas de asociación 
-               mediante el algoritmo Apriori, junto con la clasificación usando modelos supervisados (árboles CART y redes neuronales). Al final, evalué 
-               el desempeño de los modelos implementados. 
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN: CONTACTO -->
-    <section id="contacto" class="mb-5">
-      <h2 class="mb-4">Contacto</h2>
-      <form action="#" method="POST" class="row g-3">
-        <div class="col-md-6">
-          <label for="nombre" class="form-label fw-semibold">Nombre:</label>
-          <input 
-            type="text" 
-            id="nombre" 
-            name="nombre" 
-            required 
-            placeholder="Tu nombre aquí"
-            class="form-control"
-          >
-        </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label fw-semibold">Correo electrónico:</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            required 
-            placeholder="ejemplo@correo.com"
-            class="form-control"
-          >
-        </div>
-        <div class="col-12">
-          <label for="mensaje" class="form-label fw-semibold">Mensaje:</label>
-          <textarea 
-            id="mensaje" 
-            name="mensaje" 
-            rows="4"
-            placeholder="Escribe tu mensaje..."
-            required
-            class="form-control"
-          ></textarea>
-        </div>
-        <div class="col-12">
-          <p class="fw-semibold mb-2">¿Sobre qué tema deseas ayuda?</p>
-          <div class="form-check form-check-inline">
-            <input 
-              type="checkbox" 
-              name="tema" 
-              value="Analisis de datos" 
-              class="form-check-input" 
-              id="temaData"
-            >
-            <label class="form-check-label" for="temaData">Análisis de Datos/Ingenieria de datos</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input 
-              type="checkbox" 
-              name="tema" 
-              value="Backend/Front-end" 
-              class="form-check-input" 
-              id="temaWeb"
-            >
-            <label class="form-check-label" for="temaWeb">Back-end/Front-end</label>
-          </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-custom">Enviar</button>
-          </div>
-        </div>
-      </form>
-    </section>
-  </main>
-  <footer class="bg-dark text-light py-3 text-center">
-     <p>© 2025 Axel - Científico de la Computación</p>
-  <div class="d-flex justify-content-center gap-3">
-    <a href="https://www.linkedin.com/in/axel-yael-pe%C3%B1a-nu%C3%B1ez-69a1362a5/" class="text-light">LinkedIn</a>
-    <a href="https://github.com/AxelYael" class="text-light">GitHub</a>
-    </div>
- </footer>
- 
-  <!-- Bootstrap JS (menú desplegable en móviles) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
 </body>
 </html>
-
